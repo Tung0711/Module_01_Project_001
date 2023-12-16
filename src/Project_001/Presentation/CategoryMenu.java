@@ -51,10 +51,12 @@ public class CategoryMenu {
                 case 4:
                     ctl.updateCatalogById(scanner);
                     ctl.writeDataCatalogToFile();
+                    ctl.displayDataCatalog();
                     break;
                 case 5:
                     ctl.deleteCatalogById(scanner);
                     ctl.writeDataCatalogToFile();
+                    ctl.displayDataCatalog();
                     break;
                 case 6:
                     isExit = false;

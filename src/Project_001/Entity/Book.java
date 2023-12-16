@@ -149,7 +149,7 @@ public class Book implements IEntity, Serializable {
         System.out.println("Nhập vào tiêu đề sách: ");
         do {
             try {
-                String title = scanner.nextLine();
+                String title = scanner.nextLine().trim();
                 if ((title.length() >= 6) && (title.length() < 50)) {
                     boolean isExist = false;
                     for (int i = 0; i < lsBook.size(); i++) {
@@ -176,7 +176,7 @@ public class Book implements IEntity, Serializable {
         System.out.println("Nhập vào tên tác giả: ");
         do {
             try {
-                String author = scanner.nextLine();
+                String author = scanner.nextLine().trim();
                 if (author != null) {
                     return author;
                 } else {
@@ -192,7 +192,7 @@ public class Book implements IEntity, Serializable {
         System.out.println("Nhập vào nhà xuất bản: ");
         do {
             try {
-                String publisher = scanner.nextLine();
+                String publisher = scanner.nextLine().trim();
                 if (publisher != null) {
                     return publisher;
                 } else {
@@ -225,7 +225,7 @@ public class Book implements IEntity, Serializable {
         System.out.println("Nhập vào mô tả sách: ");
         do {
             try {
-                String description = scanner.nextLine();
+                String description = scanner.nextLine().trim();
                 if (description != null) {
                     return description;
                 } else {

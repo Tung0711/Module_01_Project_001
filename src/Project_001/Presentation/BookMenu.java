@@ -44,10 +44,12 @@ public class BookMenu {
                 case 2:
                     bk.updateBookById(scanner);
                     bk.writeDataBookToFile();
+                    bk.displayDataBook();
                     break;
                 case 3:
                     bk.deleteBook(scanner);
                     bk.writeDataBookToFile();
+                    bk.displayDataBook();
                     break;
                 case 4:
                     bk.findBook(scanner);

@@ -96,12 +96,12 @@ public class BookImp {
         System.out.println("Nhập vào tiêu đề sách cần tìm: ");
         try {
             String findBookTitle = scanner.nextLine();
-            boolean isFindBook = lsBook.stream().anyMatch(book -> book.getTitle().equalsIgnoreCase(findBookTitle));
+            boolean isFindBook = lsBook.stream().anyMatch(book -> book.getTitle().contains(findBookTitle));
             if (!isFindBook) {
                 System.err.println("Sách không tồn tại!");
             } else {
                 formatPrintBook();
-                lsBook.stream().filter(book -> book.getTitle().equalsIgnoreCase(findBookTitle)).forEach(System.out::println);
+                lsBook.stream().filter(book -> book.getTitle().contains(findBookTitle)).forEach(System.out::println);
             }
         } catch (Exception ex) {
             ex.printStackTrace();
